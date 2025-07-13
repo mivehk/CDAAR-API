@@ -82,4 +82,4 @@ Developed by Kayvan Mivehnejad to epitomize bioinformatics workflows in a Flask 
 This API is inspired by educational needs to bring the Central Dogma to life in data-driven platforms.
 
 📄 License
-This project is licensed under the MIT License. See LICENSE for details.
+This project is licensed under the MIT License.
