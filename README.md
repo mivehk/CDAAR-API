@@ -43,16 +43,18 @@ Response:
     "length": 3
   }
 }
-
+```
 
 📦 Installation
 
+``` bash
 git clone git@github.com:<your-username>/CDAAR-API.git
 cd CDAAR-API
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python Translation_transcription.py
+```
 
 ⚙️ API Documentation
 This project uses flask-openapi3 with built-in support for:
@@ -62,26 +64,22 @@ Redoc
 RapiDoc
 Scalar
 
-Once running, navigate to:
 
-http://localhost:5604/docs (Swagger)
-
-http://localhost:5604/redoc (Redoc)
 
 ✅ Testing
-Run tests using pytest:
-
+``` bash
+#Run tests using pytest:
 
 pytest tests/
-You can also run PEP8 formatting checks:
+#You can also run PEP8 formatting checks:
 
 black --check .
-GitHub Actions CI is configured to run tests and black checks automatically on each push.
-
+#GitHub Actions CI is configured to run tests and black checks automatically on each push.
+```
 🧠 Credits
-Developed by Kayvan Mivehnejad as a synthesis of bioinformatics knowledge and Python RESTful service design.
+Developed by Kayvan Mivehnejad to epitomize bioinformatics workflows in a Flask API.
 
-This API is inspired by educational needs, genomics pipelines, and the desire to bring the Central Dogma to life in data-driven platforms.
+This API is inspired by educational needs to bring the Central Dogma to life in data-driven platforms.
 
 📄 License
 This project is licensed under the MIT License. See LICENSE for details.
