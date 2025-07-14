@@ -1,6 +1,8 @@
 # 🧬 CDaaR-API – Central Dogma as a REST API
 
-![TRANSLATION](./images/T003.png)
+<p align="center">
+  <img src="./images/T003.png" alt="TRANSLATION" width="300"/>
+</p>
 
 **CDaaR (Central Dogma as a REST API)** is a Flask-based educational web service that models the molecular transcription and translation on cellular environments fundamental to genetics and genomics — including DNA reverse complementation, RNA transcription, reverse transcription to cDNA, and mRNA translation into polypeptides. Built for bioinformatics pipelines, teaching, and data validation, this API reflects on engineered natural selection, as intersection of biology with computing.
 
@@ -8,12 +10,12 @@
 
 ---
 
-## 🚀 API Endpoints
+## API Endpoints
 
 - 🧬 **/DNA/v2/**: Get the reverse complement of a DNA strand.
 - 🧫 **/RNA/v2/**: Transcribe DNA to pre-mRNA using canonical base-pairing.
 - 🔄 **/CDNA/v2/**: Reverse transcribe mRNA into complementary double-stranded DNA.
-- 🧿 **/Polypeptide/v2/**: Translate mRNA into a polypeptide chain of amino acids.
+- 🧱 **/Polypeptide/v2/**: Translate mRNA into a polypeptide chain of amino acids.
 
 All endpoints:
 - Enforce strict nucleotide validation using `Pydantic` models
@@ -45,7 +47,7 @@ Response:
 }
 ```
 
-📦 Installation
+## Installation
 
 ``` bash
 git clone git@github.com:<your-username>/CDAAR-API.git
@@ -56,7 +58,7 @@ pip install -r requirements.txt
 python Translation_transcription.py
 ```
 
-⚙️ API Documentation
+## API Documentation
 This project uses flask-openapi3 with built-in support for:
 
 Swagger UI
@@ -66,7 +68,8 @@ Scalar
 
 
 
-✅ Testing
+## Testing
+
 ``` bash
 #Run tests using pytest:
 
@@ -76,10 +79,12 @@ pytest tests/
 black --check .
 #GitHub Actions CI is configured to run tests and black checks automatically on each push.
 ```
-🧠 Credits
-Developed by Kayvan Mivehnejad to epitomize bioinformatics workflows in a Flask API.
+## Credits
+
+Developed by <b><i>Kayvan Mivehnejad</i></b> to epitomize bioinformatics workflows in a Flask API.
 
 This API is inspired by educational needs to bring the Central Dogma to life in data-driven platforms.
 
-📄 License
+## License
+
 This project is licensed under the MIT License.
