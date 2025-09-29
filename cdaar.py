@@ -63,19 +63,19 @@ class Translation(BaseModel):
 
 
 rna_tag = Tag(
-    name="RNA Transcription from the Reverse Complement of a DNA Sequence",
-    description="DNA Transcription to mRNA",
+    name="DNA Transcription to mRNA",
+    description="RNA Transcription from the Antisense strand of a DNA Sequence",
 )
 dna_tag = Tag(
-    name="Reverse Complement of a DNA Coding Sequence",
+    name="Template sequence of a DNA Coding Sequence",
     description="Reverse Complement of a DNA Coding Sequence",
 )
 cdna_tag = Tag(
-    name="The Complementary Double Stranded DNA from mRNA", description="mRNA to cDNA"
+    name="mRNA to cDNA", description="The Complementary Double Stranded DNA from mRNA"
 )
 aminoacid_tag = Tag(
-    name="Polypeptide chain comprised of peptide links of amino-acids translated from mRNA",
-    description="mRNA to Polypeptide Chain",
+    name="mRNA to Polypeptide Chain",
+    description="mRNA is translated into Polypeptide chain comprised of amino-acids with peptide links",
 )
 
 

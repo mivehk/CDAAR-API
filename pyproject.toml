@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdaar"
+version = "2.0.1"
+description = "RESTful API for the central dogma of molecular biology"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Kayvan Mivehnejad", email = "support@miveh-nejad.info" }
+]
+dependencies = [
+    "Flask==3.1.0",
+    "pydantic==2.10.6",
+    "flask-openapi3==4.1.0",
+    "flask-openapi3-swagger==5.20.0",
+    "flask-openapi3-redoc==2.4.0",
+    "flask-openapi3-rapidoc==9.3.8",
+    "flask-openapi3-rapipdf==2.2.1",
+    "flask-openapi3-scalar==1.25.127",
+    "flask-openapi3-elements==9.0.0",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "black==25.1.0",
+    "pytest==7.3.1",
+    "requests==2.30.0",
+]

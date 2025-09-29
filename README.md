@@ -47,15 +47,16 @@ Response:
 }
 ```
 
-## Installation
+## Local Installation
 
 ``` bash
-git clone git@github.com:<your-username>/CDAAR-API.git
+git clone git@github.com:mivehk/CDAAR-API.git
 cd CDAAR-API
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python Translation_transcription.py
+python3 -m venv cdaar-env
+source cdaar-env/bin/activate
+python3 -m pip install -e ".[dev]"
+python3 cdaar.py
+
 ```
 
 ## API Documentation
@@ -65,8 +66,10 @@ Swagger UI
 Redoc
 RapiDoc
 Scalar
+RapiPDF
+Elements
 
-
+The API will be available at localhost:5604, with interactive OpenAPI at http://localhost:5604/openapi
 
 ## Testing
 
