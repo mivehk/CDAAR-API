@@ -1,7 +1,7 @@
 # 🧬 CDaaR-API – Central Dogma as a REST API
 
 <p align="center">
-  <img src="./images/T003.png" alt="TRANSLATION" width="300"/>
+  <img src="./images/T002.png" alt="TRANSLATION" width="300"/>
 </p>
 
 **CDaaR (Central Dogma as a REST API)** is a Flask-based educational web service that models the molecular transcription and translation on cellular environments fundamental to genetics and genomics — including DNA reverse complementation, RNA transcription, reverse transcription to cDNA, and mRNA translation into polypeptides. Built for bioinformatics pipelines, teaching, and data validation, this API reflects on engineered natural selection, as intersection of biology with computing.
