@@ -5,28 +5,8 @@ import asyncio
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 
-# ======= learning multi-thread method ===========
-'''
-def dna_gen(l : int = 3):
-    dna_seq = ''.join(random.choice('ATGC') for _ in range(l))
-    return dna_seq
+# ======= multi-thread method ===========
 
-def get_url(url):
-    return requests.get(url).text.strip()
-
-def multithread():
-    urls=[ f"https://dev15.miveh-nejad.info/RNA/v2/?seq={dna_gen()}" for _ in range(10)]
-    with ThreadPoolExecutor(max_workers=5) as thread:
-        results_ = list(thread.map(get_url, urls))
-        return results_
-
-
-
-if __name__ == '__main__':
-    
-    for item in multithread():
-        print(item)
-'''
 '''
 The benefit of ProcessPoolExecutor .vs ThreadPoolExecutor depends entirely on whether the workload is 
 CPU-bound or I/O-bound. In a cohesive explanation, threads are blocked by Python’s Global Interpreter Lock
@@ -69,52 +49,13 @@ if __name__ == '__main__':
         print(i)
         
 
-# ======= learning asynchronous method ===========
+# ======= asynchronous method ===========
+
 '''
-async def test():
-    print("Hello ...")
-    await asyncio.sleep(3)
-    print("... World")
 
-
-
-asyncio.run(test())
-'''
-'''
-async def completion(str1):
-    print("This Ghul i hear is ...")
-    await asyncio.sleep(2)
-    print(f"... {str1}")
-
-list_1 = ["inside of my head", "next to my ear", "in the hallway", "macrhing in one cm upstairs", "pounding doors"]
 # asyncio.gather runs multiple async tasks concurrently and returns their results in order
 # time it takes to run multiple async tasks is as long as the one of the tasks that is the longest
 
-async def take_string():
-    result_ = [completion(item) for item in list_1]
-    await asyncio.gather(*result_)
-
-
-asyncio.run(take_string())    
-'''
-'''
-async def get_url(session, url):
-    async with session.get(url) as result_:
-        return await result_.text()
-
-
-async def run_async():
-    urls = ["https://dev15.miveh-nejad.info/RNA/v2/?seq=ATGC"] * 3
-    async with aiohttp.ClientSession() as session:
-        result_= [get_url(session, url) for url in urls]
-        return await asyncio.gather(*result_)
-
-
-for item in asyncio.run(run_async()):
-    print(item)
-
-'''
-'''
 # async functions are called coroutine, when called they do not run immediately.
 # it returns suspended object that must be scheduled by an event loop
 # async/await and yield both pause execution. yield runs synchronously waiting for next call, async/await provide concurrency while waiting 
