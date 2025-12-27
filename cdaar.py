@@ -1,6 +1,7 @@
 from flask_openapi3 import OpenAPI, Info, Tag
 from flask import jsonify
 from pydantic import BaseModel, Field, validator
+from flask_cors import CORS
 
 # here is how i installed some of the openapi UI on zsh venv
 # `python3 -m pip install -U "flask-openapi3[swagger,redoc,rapidoc,rapipdf,scalar,elements]"`
@@ -8,7 +9,7 @@ from pydantic import BaseModel, Field, validator
 
 info = Info(title="Central Dogma Transcription API", version="2.0.1")
 app = OpenAPI(__name__, info=info)
-
+CORS(app)
 
 class RNAQuery(BaseModel):
     seq: str = Field(
